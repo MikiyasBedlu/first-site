@@ -1,7 +1,26 @@
 let name = "Mikiyas";
-const branches = 8;
+const branches = [
+  "Adama",
+  "Adama Bole",
+  "Bishoftu",
+  "Shashamane",
+  "Hawassa",
+  "Jigjiga",
+  "Hargeisa",
+  "Furi",
+];
+const container = document.getElementById("branches");
+branches.forEach(function (branch) {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.textContent = branch;
+  container.appendChild(card);
+});
+branches.forEach(function (branches) {
+  console.log(branches);
+});
 console.log("My name is " + name);
-console.log("Super Skate has " + branches + " branches");
+console.log("Super Skate has " + branches.length + " branches");
 let age = 26;
 console.log("I am " + age + " years old.");
 const button = document.getElementById("greetBtn");
