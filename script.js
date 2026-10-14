@@ -42,5 +42,7 @@ addBtn.addEventListener("click", function () {
   if (newName !== "") {
     addCard(newName);
     branchInput.value = "";
+  } else {
+    alert("please enter a name");
   }
 });
