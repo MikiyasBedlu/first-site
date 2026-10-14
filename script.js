@@ -16,9 +16,6 @@ branches.forEach(function (branch) {
   card.textContent = branch;
   container.appendChild(card);
 });
-branches.forEach(function (branches) {
-  console.log(branches);
-});
 console.log("My name is " + name);
 console.log("Super Skate has " + branches.length + " branches");
 let age = 26;
@@ -30,5 +27,20 @@ button.addEventListener("click", function () {
     message.textContent = "Welcome to Super Skate!";
   } else {
     message.textContent = "";
+  }
+});
+function addCard(name) {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.textContent = name;
+  container.appendChild(card);
+}
+const addBtn = document.getElementById("addBtn");
+const branchInput = document.getElementById("branchInput");
+addBtn.addEventListener("click", function () {
+  const newName = branchInput.value;
+  if (newName !== "") {
+    addCard(newName);
+    branchInput.value = "";
   }
 });
